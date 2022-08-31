@@ -21,19 +21,21 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 100vh;
 	flex-direction: column;
 }
 .wrapper {
 	width: 360px;
-	height: auto;
+	height: 360px;
 	background-color: var(--very-dark-blue);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding: 30px;
 	margin: 10px;
-	border-radius: 20px;
+	border-radius: 25px;
 }
+
 .star {
 	width: 30px;
 	height: 30px;
@@ -72,9 +74,68 @@ p {
 	align-items: center;
 	background-color: var(--dark-blue);
 	color: var(--light-grey);
+	cursor: pointer;
+	font-weight: 700;
+	transition: 0.4s;
+}
+
+.rate:hover {
+	background-color: var(--medium-grey);
+	color: var(--standard-white);
+}
+
+.rate.active {
+	background-color: var(--primary-orange);
+	color: var(--standard-white);
 }
 button {
 	background-color: var(--primary-orange);
-	padding: 10px 0;
-	border-radius: 20px;
+	padding: 12px 0;
+	border-radius: 40px;
+	font-weight: 700;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+button:hover {
+	background-color: var(--standard-white);
+	color: var(--primary-orange);
+}
+
+.modal {
+	align-items: center;
+	display: none;
+}
+
+.modal img {
+	height: 100px;
+	width: fit-content;
+}
+
+.rate-info {
+	display: inline-block;
+	background-color: var(--dark-blue);
+	padding: 5px 20px;
+	border-radius: 30px;
+	margin: 30px;
+	font-size: 14px;
+	color: var(--primary-orange);
+}
+.rate-choice {
+	font-size: 14px;
+	color: var(--primary-orange);
+}
+
+.modal p {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+.attribution {
+	position: absolute;
+	bottom: 10px;
+	font-size: 12px;
 }
